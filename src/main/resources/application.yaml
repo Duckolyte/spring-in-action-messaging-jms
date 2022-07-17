@@ -1,0 +1,22 @@
+spring:
+  artemis:
+    host: localhost
+    port: 61617
+    user: admin
+    password: admin
+  jms:
+    template:
+      default-destination: tacocloud.order.queue # Used if send() is called without a Destination object.
+  datasource:
+    url: jdbc:h2:mem:tacocloud
+    username: sa
+    password: sa
+    driverClassName: org.h2.Driver
+    generate-unique-name: false
+    name: tacocloud
+    jpa:
+      spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+    h2:
+      console:
+        enabled: true
+
